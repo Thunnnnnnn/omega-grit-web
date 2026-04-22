@@ -10,7 +10,7 @@
 npm install
 ```
 
-รันโปรแกรมในโหมด Developer:
+รันโปรแกรมในโหมด Development:
 
 ```bash
 npm run dev
