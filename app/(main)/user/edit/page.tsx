@@ -85,13 +85,6 @@ export default function EditUserPage() {
         <span className="text-3xl font-bold">แก้ไขข้อมูลผู้ใช้</span>
         <div className="flex flex-col mt-6 gap-4">
           <Input
-            placeholder="อีเมล"
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          ></Input>
-
-          <Input
             placeholder="ชื่อ"
             type="text"
             value={firstname}
@@ -102,6 +95,12 @@ export default function EditUserPage() {
             type="text"
             value={lastname}
             onChange={(e) => setLastname(e.target.value)}
+          ></Input>
+          <Input
+            placeholder="อีเมล"
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           ></Input>
           <Input
             placeholder="เบอร์โทรศัพท์"

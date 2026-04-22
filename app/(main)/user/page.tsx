@@ -21,7 +21,7 @@ export default function UserPage() {
   const store = useAuthStore();
   const hasRun = useRef(false);
   const [api, contextHolder] = notification.useNotification();
-  const [token, setToken] = useState(localStorage.getItem("token"));
+  const [token, setToken] = useState(localStorage.getItem("token") || "");
 
   const columns: TableProps<DataType>["columns"] = [
     {
