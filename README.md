@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## 📌 Project Overview
+ระบบสำหรับจองคิวอาบน้ำและตัดขนสัตว์
+ผู้ใช้สามารถสมัครสมาชิก, เข้าสู่ระบบ, และจองคิวได้
 
 ## Getting Started
 
-First, run the development server:
+ติดตั้งแพคเกจของโปรเจคนี้
+
+```
+npm install
+```
+
+รันโปรแกรมในโหมด Developer:
 
 ```bash
 npm run dev
-# or
+# หรือ
 yarn dev
-# or
+# หรือ
 pnpm dev
-# or
+# หรือ
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+เปิด [http://localhost:3000](http://localhost:3000) -> โดย browser ของคุณเพื่อดู
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Route Path
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+[http://localhost:3000](http://localhost:3000) -> จะเป็นหน้าหลักของโปรแกรม
 
-## Learn More
+[http://localhost:3000/login](http://localhost:3000/login) -> จะเป็นหน้าสำหรับการเข้าสู่ระบบ โดยจะใช้ email และพาสเวิร์ดเพื่อเข้าสู่ระบบ จะต้องมี account หรือทำการ register ก่อนเข้าระบบ
 
-To learn more about Next.js, take a look at the following resources:
+[http://localhost:3000/register](http://localhost:3000/register) -> จะเป็นหน้าสำหรับการสมัคร account เพื่อเข้าสู่ระบบ โดยจะใช้ email, password, ชื่อ, นามสกุล และเบอร์โทรศัพท์ เพื่อสมัคร account
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+[http://localhost:3000/booking](http://localhost:3000/booking) -> จะเป็นหน้าสำหรับการจองคิวเข้าใช้บริการอาบน้ำตัดขนสัตว์ โดยจะต้องกรอกข้อมูล ประเภทการจองคิว, ประเภทสัตว์, วันที่ต้องการเข้าพบ และเวลาที่ต้องการเข้าพบ โดยจะต้องเข้าสู่ระบบก่อนจองคิว
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+[http://localhost:3000/user](http://localhost:3000/user) -> จะเป็นหน้าแสดงข้อมูลผู้ใช้รวมถึงคิวที่จองทั้งหมดของผู้ใช้ โดยหน้านี้จะสามารถทำการยกเลิกคิว, แก้ไขคิว, แก้ไขข้อมูลผู้ใช้, เปลี่ยนรหัสผ่าน และออกจากระบบ
 
-## Deploy on Vercel
+[http://localhost:3000/user/edit](http://localhost:3000/user/edit) -> จะเป็นหน้าแก้ไขข้อมูลผู้ใช้ โดยหน้านี้จะสามารถแก้ไขข้อมูล ชื่อ, นามสกุล, email และเบอร์โทรศัพท์
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+[http://localhost:3000/user/change-password](http://localhost:3000/user/change-password) -> จะเป็นหน้าเปลี่ยนรหัสผ่าน โดยหน้านี้จะสามารถแก้ไขรหัสผ่านได้ โดยจะต้องใช้ รหัสผ่านเก่า, รหัสผ่านใหม่ และยืนยันรหัสผ่านใหม่
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+[http://localhost:3000/user/edit-queue/:id](http://localhost:3000/user/edit-queue/:id) -> จะเป็นหน้าแก้ไขข้อมูลการจองคิว โดยหน้านี้จะสามารถแก้ไข ประเภทการจองคิว, ประเภทสัตว์, วันที่ต้องการเข้าพบ และเวลาที่ต้องการเข้าพบ
+ 
