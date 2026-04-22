@@ -182,9 +182,9 @@ export default function UserPage() {
   };
 
   return (
-    <div className="p-10">
+    <div className="p-10 flex flex-col flex-1 font-sans dark:bg-black">
       {contextHolder}
-      <Card className="flex flex-col flex-1 font-sans dark:bg-black p-10">
+      <Card>
         <div className=" flex justify-between">
           <span className="text-3xl font-bold">ข้อมูลผู้ใช้</span>
           <div className="flex gap-3">
