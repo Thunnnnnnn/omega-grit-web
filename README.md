@@ -10,7 +10,15 @@
 npm install
 ```
 
-รันโปรแกรมในโหมด Development:
+### Setup .env
+
+สร้างไฟล์ .env ใน root ของโปรเจค และกำหนดค่า:
+
+```
+API_URL=
+```
+
+### รันโปรแกรมในโหมด Development:
 
 ```bash
 npm run dev
